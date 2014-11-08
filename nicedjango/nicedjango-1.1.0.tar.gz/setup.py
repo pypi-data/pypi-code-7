@@ -1,0 +1,37 @@
+from setuptools import setup, find_packages
+__VERSION__ = '1.1.0'
+
+setup(
+    name='nicedjango',
+    version=__VERSION__,
+    description="Extensions for Django",
+    long_description=(open('README.rst').read()),
+    author='Mathias Seidler',
+    author_email='seishin@gmail.com',
+    maintainer='Mathias Seidler',
+    maintainer_email='seishin@gmail.com',
+    url='http://github.com/katakumpo/nicedjango',
+    license='MIT License',
+    platforms=['any'],
+    packages=find_packages(exclude=['tests*']),
+    install_requires=['Django>=1.4', 'six>=1.2'],
+    tests_require=['Django', 'pytest', 'pytest-django'],
+    test_suite='run_tests.main',
+    classifiers=[
+        'Development Status :: 5 - Production/Stable',
+        'Environment :: Web Environment',
+        'Framework :: Django',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: Implementation :: PyPy',
+        'Topic :: Utilities',
+    ],
+)
