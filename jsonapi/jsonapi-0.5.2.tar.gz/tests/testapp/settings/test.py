@@ -1,0 +1,13 @@
+from .base import *
+
+INSTALLED_APPS += (
+    'tests.testapp.test_api',
+    'tests.testapp.test_resource_meta',
+    'tests.testapp.test_resource_relationship',
+)
+
+if django.VERSION[:2] < (1, 6):
+    TEST_RUNNER = 'discover_runner.DiscoverRunner'
+
+TEST_DISCOVER_TOP_LEVEL = os.path.dirname(
+    os.path.dirname(os.path.dirname(__file__)))
