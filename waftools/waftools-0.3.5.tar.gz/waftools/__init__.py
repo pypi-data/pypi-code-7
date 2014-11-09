@@ -1,0 +1,44 @@
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+# Michel Mooij, michel.mooij7@gmail.com
+
+import os
+
+version = "0.3.5"
+location = os.path.abspath(os.path.dirname(__file__))
+
+
+def build(bld, trees=[]):
+	'''Perform build command on all given source trees.
+	
+	:param: bld: build context
+	:type bld: waflib.Build.BuildContext
+	:param: trees: list of source tree names
+	:type trees: list
+	'''
+	for tree in trees:
+		for script in get_scripts(tree, 'wscript'):
+			bld.recurse(script)
+
+
+def get_scripts(top, name):
+	'''Returns a list of top level paths containing the specified file name.
+	
+	:param: top: root where the search should be started.
+	:type top: str
+	:param: name: name of the file to be found.
+	:type name: str
+	'''
+	locations = []
+	for cwd, _, files in os.walk(top):
+		for f in files:
+			if os.path.basename(f) != name:
+				continue
+			locations.append(cwd)
+	scripts = []
+	for loc in locations:
+		if any(os.path.dirname(loc).endswith(t) for t in locations):
+			continue
+		scripts.append(loc)
+	return scripts
+
