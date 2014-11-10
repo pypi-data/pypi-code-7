@@ -1,0 +1,10 @@
+__version__ = "0.1.28.post5.g8382b35"
+__git_commiter_name__ = "Shai Keren"
+__git_commiter_email__ = "shaik@infinidat.com"
+__git_branch__ = 'develop'
+__git_remote_tracking_branch__ = 'origin/develop'
+__git_remote_url__ = 'git@infinigit.infinidat.com:/host/multipathtools.git'
+__git_head_hash__ = '8382b35195e18903f2bcf31c2e6eff34b8b58f88'
+__git_head_subject__ = 'HIP-395 changing unix domain socket path finding logic to support suse'
+__git_head_message__ = ''
+__git_dirty_diff__ = ''
