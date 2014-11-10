@@ -1,0 +1,2 @@
+NAME='munin_plugins'
+
