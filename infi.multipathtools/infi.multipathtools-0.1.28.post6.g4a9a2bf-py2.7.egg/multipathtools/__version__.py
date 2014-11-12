@@ -1,0 +1,10 @@
+__version__ = "0.1.28.post6.g4a9a2bf"
+__git_commiter_name__ = "Guy Rozendorn"
+__git_commiter_email__ = "guy@rzn.co.il"
+__git_branch__ = 'develop'
+__git_remote_tracking_branch__ = 'origin/develop'
+__git_remote_url__ = 'git@infinigit.infinidat.com:host/multipathtools.git'
+__git_head_hash__ = '4a9a2bfe5bf3e3be86bbdbfeb8de009d4c3b4176'
+__git_head_subject__ = 'HIP-395 handling the case the PATHNAME socket did not exist when the import occurred, but showed up later'
+__git_head_message__ = 'this happens during tests when the import happens before multipath-tools is installed and started'
+__git_dirty_diff__ = ''
