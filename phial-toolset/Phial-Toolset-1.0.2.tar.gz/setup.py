@@ -1,0 +1,50 @@
+# -*- coding: utf-8 -*-
+from setuptools import setup
+
+
+# Setup
+setup(
+    name             = 'Phial-Toolset',
+    version          = '1.0.2',
+    description      = 'Non-intrusive toolset to easily use Flask/Peewee/Celery',
+    long_description = 'Non-intrusive toolset to easily use Flask/Peewee/Celery',
+    author           = 'Thibault Meyer',
+    author_email     = 'meyer.thibault@gmail.com',
+    url              = 'https://github.com/0xbaadf00d/phial',
+    license          = 'The MIT License (MIT)',
+    packages         = ['phial',
+                        'phial.flask_tools',
+                        'phial.flask_tools.session',
+                        'phial.flask_tools.callback',
+                        'phial.jinja_tools',
+                        'phial.jinja_tools.ext',
+                        'phial.peewee_tools',
+                        'phial.phial_management',
+                        ],
+    data_files       = [('phial/assets/static/phial/css/', ['phial/assets/static/phial/css/foundation.min.css']),
+                        ('phial/assets/static/phial/img/', ['phial/assets/static/phial/img/favicon.ico',
+                                                            'phial/assets/static/phial/img/phial.png']),
+                        ('phial/assets/static/phial/js/vendor/', ['phial/assets/static/phial/js/vendor/modernizr.js']),
+                        ('phial/assets/templates/phial/', ['phial/assets/templates/phial/default_welcome.html',
+                                                           'phial/assets/templates/phial/default_debug_404.html'])],
+    scripts          = ['phial/phial-init'],
+    classifiers      = [
+        'Development Status :: 5 - Production/Stable',
+        'Environment :: Web Environment',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.2',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
+        'Topic :: Internet :: WWW/HTTP',
+        'Topic :: Software Development :: Libraries :: Application Frameworks',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+        ],
+    requires         = ['flask',
+                        'ipython',
+                        'Jinja2']
+)
