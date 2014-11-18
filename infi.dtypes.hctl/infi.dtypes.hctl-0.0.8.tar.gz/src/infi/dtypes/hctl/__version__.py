@@ -1,0 +1,10 @@
+__version__ = "0.0.8"
+__git_commiter_name__ = "Ayala Shachar"
+__git_commiter_email__ = "shachar.ayala@gmail.com"
+__git_branch__ = '(detached from v0.0.8)'
+__git_remote_tracking_branch__ = '(No remote tracking)'
+__git_remote_url__ = '(Not remote tracking)'
+__git_head_hash__ = '1f70ba9d91d41f0ef7da62a04bc5923e50c73ae4'
+__git_head_subject__ = 'Fix python3 compatability'
+__git_head_message__ = ''
+__git_dirty_diff__ = ''
