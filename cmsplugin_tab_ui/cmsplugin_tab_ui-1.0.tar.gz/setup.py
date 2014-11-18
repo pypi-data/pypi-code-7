@@ -1,0 +1,25 @@
+from setuptools import setup, find_packages
+setup(
+    name='cmsplugin_tab_ui',
+    version='1.0',
+    description='Tab plugin for django cms with Jquery ui',
+    long_description=open('README.rst').read(),
+    author='Luisza',
+    license = "GPLv2",
+    author_email='luis.zarate@solvosoft.com',
+    url='http://github.com/luisza/cmsplugin-tab-ui',
+    packages=find_packages(),
+    keywords='tab django cms django-cms plugin',
+    classifiers=[
+    'Development Status :: 4 - Beta',
+    'Environment :: Web Environment',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Framework :: Django',
+    ],
+    include_package_data=True,
+    zip_safe=False,
+    install_requires=open('requirements.txt').read().split('\n'),
+)
