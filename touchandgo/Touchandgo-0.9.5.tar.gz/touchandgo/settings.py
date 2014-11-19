@@ -1,0 +1,5 @@
+DEBUG = True
+
+DEFAULT_PORT = 8888
+WAIT_FOR_IT = 0.3
+SKIP_MOOV = True
