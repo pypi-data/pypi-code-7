@@ -1,0 +1,10 @@
+__version__ = "0.1.8"
+__git_commiter_name__ = "Guy Rozendorn"
+__git_commiter_email__ = "guy@rzn.co.il"
+__git_branch__ = '(detached from v0.1.8)'
+__git_remote_tracking_branch__ = '(No remote tracking)'
+__git_remote_url__ = '(Not remote tracking)'
+__git_head_hash__ = '8dc08f6a4f30a3909c89558aaa4950efa126d6d0'
+__git_head_subject__ = 'Finished release v0.1.8.'
+__git_head_message__ = '* release/v0.1.8:\n  TRIVIAL better handling the case of collecting processes we did not find\n  HIPVM-648 gevent-awareness\n  buildout.cfg: changed isolated python version to v2.7.6.21'
+__git_dirty_diff__ = ''
