@@ -1,0 +1,10 @@
+__version__ = "0.6.28"
+__git_commiter_name__ = "Guy Rozendorn"
+__git_commiter_email__ = "guy@rzn.co.il"
+__git_branch__ = '(detached from v0.6.28)'
+__git_remote_tracking_branch__ = '(No remote tracking)'
+__git_remote_url__ = '(Not remote tracking)'
+__git_head_hash__ = 'd699445142b3c8c8efe16b6286e77d7c1ba82d0a'
+__git_head_subject__ = 'HOSTDEV-1877 fixing yet another corner case with virtualenv'
+__git_head_message__ = ''
+__git_dirty_diff__ = ''
