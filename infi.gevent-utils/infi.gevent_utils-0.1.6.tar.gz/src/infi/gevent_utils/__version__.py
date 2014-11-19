@@ -1,0 +1,10 @@
+__version__ = "0.1.6"
+__git_commiter_name__ = "Arnon Yaari"
+__git_commiter_email__ = "arnony@infinidat.com"
+__git_branch__ = '(detached from v0.1.6)'
+__git_remote_tracking_branch__ = '(No remote tracking)'
+__git_remote_url__ = '(Not remote tracking)'
+__git_head_hash__ = '1d6e04f9f7dcb9bca0c234808ae68d02ac7cb692'
+__git_head_subject__ = 'fix homepage'
+__git_head_message__ = ''
+__git_dirty_diff__ = ''
