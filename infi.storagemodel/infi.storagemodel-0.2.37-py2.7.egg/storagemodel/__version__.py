@@ -1,0 +1,10 @@
+__version__ = "0.2.37"
+__git_commiter_name__ = "Guy Rozendorn"
+__git_commiter_email__ = "guy@rzn.co.il"
+__git_branch__ = '(detached from v0.2.37)'
+__git_remote_tracking_branch__ = '(No remote tracking)'
+__git_remote_url__ = '(Not remote tracking)'
+__git_head_hash__ = 'cdce41790868ad6c13352ea5aa944f5347e9bc09'
+__git_head_subject__ = 'Finished release v0.2.37.'
+__git_head_message__ = '* release/v0.2.37:\n  TRIVIAL fixing NameError\n  STORAGEMODEL-307 ensuring methods that iterate over device don\'t fail in case one device is not working as expected\n  TRIVIAL logging messages\n  Revert "HIPVM-615 avoiding uncessary rescans"\n  HIPVM-615 on VMWare, we must wait for the rescan before running the predicates\n  HIPVM-615 avoiding uncessary rescans'
+__git_dirty_diff__ = ''
