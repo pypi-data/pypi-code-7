@@ -1,0 +1,71 @@
+import os
+
+from miura import runner
+from .utils import get_method_from_module, format_path_to_module
+from .data import load_data_from_path, filter_data
+from .template import TemplateSet
+from .exceptions import MiuraException
+
+import logging
+
+DEFAULT_DATA_DIRECTORY = os.path.join(os.curdir, 'data')
+DEFAULT_TEMPLATE_DIRECTORY = os.path.join(os.curdir, 'templates')
+DEFAULT_SCRIPTS_DIRECTORY = os.path.join(os.curdir, 'scripts')
+
+LOGGER = logging.getLogger(__name__)
+
+
+class MiuraScript(object):
+
+    delete = False  # if true, delete the jobs instead of upserting them
+    dry_run = False  # if true, the jobs will not run
+    print_dir = None  # if set, will print configs to the directory passed
+
+    def __init__(self, script_name,
+                 data_directory,
+                 scripts_directory,
+                 template_directory,
+                 data_filters=None
+                 ):
+        self.script_name = script_name
+        self.data_directory = data_directory
+        self.scripts_directory = scripts_directory
+        self.template_directory = template_directory
+        self.data_filters = data_filters or {}
+        self.method_options = {}
+
+    def __call__(self):
+        target_module = "{0}.{1}".format(
+            format_path_to_module(self.scripts_directory),
+            self.script_name
+        )
+
+        try:
+            run_method = get_method_from_module(target_module, 'run')
+        except ImportError:
+            raise MiuraException("Unable to find script {0}".format(target_module))
+
+        data = load_data_from_path(self.data_directory)
+        if self.data_filters:
+            filter_data(data, self.data_filters)
+
+        templates = TemplateSet(self.template_directory)
+
+        if self.delete:
+            target_method = 'delete'
+        else:
+            target_method = 'upsert'
+
+        if self.dry_run:
+            LOGGER.info("Performing a Dry Run! No Jobs Are Being Created")
+            target_method = 'dry_run'
+
+        job_parser = runner.JobParser(
+            data,
+            templates,
+        )
+
+        for job in job_parser.parse_job(run_method, self.method_options):
+            if self.print_dir:
+                job.print_job(self.print_dir)
+            getattr(job, target_method)()
