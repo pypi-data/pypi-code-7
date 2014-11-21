@@ -1,0 +1,1 @@
+from cqrs.gateway.base import IGateway
