@@ -1,0 +1,4 @@
+
+
+class CommandValidationError(ValueError):
+    pass
