@@ -1,0 +1,10 @@
+__version__ = "0.3.30"
+__git_commiter_name__ = "Guy Rozendorn"
+__git_commiter_email__ = "guy@rzn.co.il"
+__git_branch__ = '(detached from v0.3.30)'
+__git_remote_tracking_branch__ = '(No remote tracking)'
+__git_remote_url__ = '(Not remote tracking)'
+__git_head_hash__ = 'ee3922ce2955e206dbca112246a76eae30b50c70'
+__git_head_subject__ = 'Finished release v0.3.30.'
+__git_head_message__ = '* release/v0.3.30:\n  HOSTDEV-1812 implement asi for solaris\n  buildout.cfg: changed isolated python version to v2.7.6.21'
+__git_dirty_diff__ = ''
