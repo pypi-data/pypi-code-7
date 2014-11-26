@@ -1,0 +1,10 @@
+__version__ = "0.2.38"
+__git_commiter_name__ = "Guy Rozendorn"
+__git_commiter_email__ = "guy@rzn.co.il"
+__git_branch__ = '(detached from v0.2.38)'
+__git_remote_tracking_branch__ = '(No remote tracking)'
+__git_remote_url__ = '(Not remote tracking)'
+__git_head_hash__ = '703d1ed21fb4bb54225a4d1783be73f8b6262439'
+__git_head_subject__ = 'Finished release v0.2.38.'
+__git_head_message__ = '* release/v0.2.38:\n  TRIVIAL fixing NameError\n  TRIVIAL adding more information to logs\n  STORAGEMODEL-307 handling another case of dangling device'
+__git_dirty_diff__ = ''
