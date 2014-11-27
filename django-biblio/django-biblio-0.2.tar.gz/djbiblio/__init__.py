@@ -1,0 +1,10 @@
+pkgname           = 'django-biblio'
+__description__   = 'django app for storing bibliographical references'
+__version__       = '0.2'
+__author__        = 'Michal Grochmal'
+__author_email__  = 'grochmal at member dot fsf dot org'
+__copyright__     = 'Michal Grochmal (C) 2014'
+__license__       = 'GNU General Public License, version 3 or later'
+__url__           = 'https://bitbucket.org/grochmal/django-biblio'
+__date__          = '2014-11-20'
+
