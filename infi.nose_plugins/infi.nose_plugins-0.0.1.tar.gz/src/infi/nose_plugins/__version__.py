@@ -1,0 +1,10 @@
+__version__ = "0.0.1"
+__git_commiter_name__ = "Guy Rozendorn"
+__git_commiter_email__ = "guy@rzn.co.il"
+__git_branch__ = '(detached from v0.0.1)'
+__git_remote_tracking_branch__ = '(No remote tracking)'
+__git_remote_url__ = '(Not remote tracking)'
+__git_head_hash__ = 'd54eabdc1b99ce78882a6c66a0b220a70a4e2caf'
+__git_head_subject__ = 'Finished release v0.0.1.'
+__git_head_message__ = '* release/v0.0.1:\n  TRIVIAL adapting to Logbook-0.8.1\n  fining stderr\n  fixing stderr\n  fixing stderr\n  fixing logbook import\n  fixing setup\n  fixing setup\n  TRIVIAL first commit\n  added all project files'
+__git_dirty_diff__ = ''
