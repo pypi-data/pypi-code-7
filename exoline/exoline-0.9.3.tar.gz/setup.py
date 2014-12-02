@@ -1,0 +1,58 @@
+#!/usr/bin/env python
+
+from setuptools import setup
+import sys
+try:
+    import py2exe
+except ImportError:
+    pass
+
+from glob import glob
+
+from exoline import __version__ as version
+
+with open('requirements.txt') as f:
+    required = f.read().splitlines()
+
+data_files = [("Microsoft.VC90.CRT", glob(r'C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\redist\x86\Microsoft.VC90.CRT\*.*'))]
+
+try:
+    from collections import OrderedDict
+except ImportError:
+    required.append('ordereddict>=1.1')
+
+try:
+    import importlib
+except ImportError:
+    required.append('importlib>=1.0.2')
+
+if sys.version_info < (3, 0):
+    required.append('unicodecsv==0.9.4')
+
+
+setup(
+    name='exoline',
+    version=version,
+    url = 'http://github.com/exosite/exoline',
+    author = 'Dan Weaver',
+    author_email = 'danweaver@exosite.com',
+    description = 'Command line interface for Exosite platform.',
+    long_description = open('README.md').read() + '\n\n' +
+                      open('HISTORY.md').read(),
+    packages=['exoline', 'exoline.plugins'],
+    package_dir={'exoline': 'exoline', 'plugins': 'exoline/plugins'},
+    scripts=['bin/exo', 'bin/exoline'],
+    keywords=['exosite', 'onep', 'one platform', 'm2m'],
+    install_requires=required,
+    zip_safe=False,
+    #always_unzip=True,
+	console=['exoline/exo.py'],
+    data_files=data_files,
+	options={
+		'py2exe':
+		{
+			'includes': ['yaml', 'exoline']
+		}
+	}
+    )
+
