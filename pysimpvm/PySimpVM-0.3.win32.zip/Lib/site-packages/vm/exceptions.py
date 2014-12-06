@@ -1,0 +1,2 @@
+class VMError(Exception):
+	pass
