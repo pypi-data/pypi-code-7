@@ -1,0 +1,73 @@
+from ..utils import write_yaml
+from ..utils import with_resource
+from ..utils import local_series_finder
+
+
+@with_resource(local_series_finder)
+def action(ns, series):
+    ns.out(ns.t.bold_magenta(u"Synchronizing local database"))
+    ns.out(u"")
+
+    if not ns.api.is_authenticated():
+        ns.out(ns.t.bold_red(
+            "Cannot fully synchronize, api is not authenticated with a key!"))
+        ns.out(
+            ns.t.red("Set a value to the 'api_key' option in ") +
+            ns.t.bold_red(ns.config_path))
+        ns.out(
+            ns.t.red("If you don't have an API key, register yourself at ") +
+            ns.t.bold_red("http://thetvdb.com/?tab=register"))
+        return 0
+
+    if not ns.languages:
+        with open(ns.languages_path, 'w') as fp:
+            write_yaml(fp, ns.api.languages())
+
+    if not ns.mirrors:
+        ns.out(ns.t.bold_green("Downloading mirrors to {0}".format(
+            ns.mirrors_path)))
+
+        with open(ns.mirrors_path, 'w') as fp:
+            write_yaml(fp, ns.api.mirrors())
+
+    if not series:
+        series = ns.series.list_series()
+    else:
+        series = [series]
+
+    for s in series:
+        if s['status'] == u'Ended' and not ns.force:
+            ns.out(ns.t.bold_cyan(
+                u"Skipping: {0} (ended, use -f to force)".format(
+                    s['series_name'])))
+            continue
+
+        ns.out(ns.t.bold_cyan(
+            u"Syncing: {0}".format(s['series_name'])))
+
+        s, episodes = ns.api.series_all(
+            s['id'], ns.language)
+
+        ns.series.set_episodes(s, episodes)
+
+    return 0
+
+
+def setup(parser):
+    parser.add_argument(
+        "-f", "--force",
+        default=False,
+        help="Sync a series, even if it has ended.",
+        action='store_const',
+        const=True,
+    )
+
+    parser.add_argument(
+        "series_query",
+        metavar="<name|id>",
+        nargs='?',
+        default=None,
+        help="The id or name of the series to sync.",
+    )
+
+    parser.set_defaults(action=action)
