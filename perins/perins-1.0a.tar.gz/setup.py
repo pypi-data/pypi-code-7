@@ -1,0 +1,14 @@
+from setuptools import setup
+
+setup(
+    name='perins',
+    version='1.0a',
+    packages=['perins'],
+
+    classifiers=[
+        'Development Status :: 3 - Alpha',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 2',
+    ],
+)
