@@ -1,0 +1,53 @@
+# -*- coding:utf-8 -*-
+
+# Stdlib imports
+
+# Core Django imports
+from django.utils.translation import ugettext as _
+
+KIND_STREET = (
+    ('1', _(u'Airport')),
+    ('2', _(u'Mall')),
+    ('3', _(u'Area')),
+    ('4', _(u'Avenue')),
+    ('5', _(u'Camp')),
+    ('6', _(u'Ranch')),
+    ('7', _(u'Colonial')),
+    ('8', _(u'Townhouse')),
+    ('9', _(u'Cluster')),
+    ('10', _(u'District')),
+    ('11', _(u'Esplanade')),
+    ('12', _(u'Station')),
+    ('13', _(u'Road')),
+    ('14', _(u'Favela')),
+    ('15', _(u'Farm')),
+    ('16', _(u'Market')),
+    ('17', _(u'Garden')),
+    ('18', _(u'Hill')),
+    ('19', _(u'Lake')),
+    ('20', _(u'Pond')),
+    ('21', _(u'Large')),
+    ('22', _(u'Subdivision')),
+    ('23', _(u'Morro')),
+    ('24', _(u'Core')),
+    ('25', _(u'Park')),
+    ('26', _(u'Walkway')),
+    ('27', _(u'Courtyard')),
+    ('28', _(u'Square')),
+    ('29', _(u'Court')),
+    ('30', _(u'Nook')),
+    ('31', _(u'Residential')),
+    ('32', _(u'Highway')),
+    ('33', _(u'Street')),
+    ('34', _(u'Sector')),
+    ('35', _(u'Grange')),
+    ('36', _(u'Lane')),
+    ('37', _(u'Passage')),
+    ('38', _(u'Clover')),
+    ('39', _(u'Valley')),
+    ('40', _(u'Path')),
+    ('41', _(u'Road')),
+    ('42', _(u'Viaduct')),
+    ('43', _(u'Alley')),
+    ('44', _(u'Village')),
+)
