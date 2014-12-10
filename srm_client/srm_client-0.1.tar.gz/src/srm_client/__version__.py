@@ -1,0 +1,10 @@
+__version__ = "0.1"
+__git_commiter_name__ = "Guy Rozendorn"
+__git_commiter_email__ = "guy@rzn.co.il"
+__git_branch__ = '(detached from v0.1)'
+__git_remote_tracking_branch__ = '(No remote tracking)'
+__git_remote_url__ = '(Not remote tracking)'
+__git_head_hash__ = '7de4c253ef1101c4d3c275180ad8de4f36bf9baa'
+__git_head_subject__ = 'Finished release v0.1.'
+__git_head_message__ = '* release/v0.1:\n  refactoring\n  recovery-plans\n  protection groups\n  more xml files\n  list protection groups\n  protection-groups: work-in-progress\n  refactoring\n  remote login\n  list-devices\n  refresh devices\n  disable/enable array pairs\n  refresh\n  list-arrays now working\n  get_arrays: using retrieve properties instead\n  get_arrays finally shows some array info\n  creating property filers, work-in-progress\n  login to internal apis\n  buildout.cfg: changed isolated python version to v2.7.6.21\n  buildout.cfg: changed isolated python version to v2.7.6.20\n  buildout.cfg: changed isolated python version to v2.7.6.19'
+__git_dirty_diff__ = ''
