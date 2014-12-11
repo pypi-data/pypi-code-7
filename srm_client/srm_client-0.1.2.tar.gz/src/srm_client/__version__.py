@@ -1,0 +1,10 @@
+__version__ = "0.1.2"
+__git_commiter_name__ = "Guy Rozendorn"
+__git_commiter_email__ = "guy@rzn.co.il"
+__git_branch__ = '(detached from v0.1.2)'
+__git_remote_tracking_branch__ = '(No remote tracking)'
+__git_remote_url__ = '(Not remote tracking)'
+__git_head_hash__ = 'f27d177af7a51f9d52c3492c886ce29171c1a7f4'
+__git_head_subject__ = 'Finished release v0.1.2.'
+__git_head_message__ = '* release/v0.1.2:\n  protectvms: fixing multiple vms\n  get_unprotected_datastores: handling the case there are none'
+__git_dirty_diff__ = ''
