@@ -1,0 +1,10 @@
+__version__ = "0.1.3"
+__git_commiter_name__ = "Guy Rozendorn"
+__git_commiter_email__ = "guy@rzn.co.il"
+__git_branch__ = '(detached from v0.1.3)'
+__git_remote_tracking_branch__ = '(No remote tracking)'
+__git_remote_url__ = '(Not remote tracking)'
+__git_head_hash__ = '1ca18336683131975706c94c9c8897bec1fc1cd6'
+__git_head_subject__ = 'fix in _extract_protection_group'
+__git_head_message__ = ''
+__git_dirty_diff__ = ''
