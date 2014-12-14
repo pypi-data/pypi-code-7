@@ -1,0 +1,10 @@
+__version__ = "1.0.2"
+__git_commiter_name__ = "Guy Rozendorn"
+__git_commiter_email__ = "guy@rzn.co.il"
+__git_branch__ = '(detached from v1.0.2)'
+__git_remote_tracking_branch__ = '(No remote tracking)'
+__git_remote_url__ = '(Not remote tracking)'
+__git_head_hash__ = '62c48ecacdbe2f80382723b3df754f7fcec5893c'
+__git_head_subject__ = 'Finished release v1.0.2.'
+__git_head_message__ = '* release/v1.0.2:\n  TRIVIAL fixing ova\n  APR-7\n  TRIVIAL cleaning up json_response\n  TRIVIAL handling missing filepaths\n  TRIVIAL adapting to Logbook-0.8.1\n  TRIVIAL legacy url for gpg.key\n  TRIVIAL finally fixing sign_rpm_package: rpm --addsign broke the hard-link\n  TRIVIAL sign_rpm_package rpc call\n  TRIVIAL CLI fixes\n  TRIVIAL newlines in rpmmacros'
+__git_dirty_diff__ = ''
