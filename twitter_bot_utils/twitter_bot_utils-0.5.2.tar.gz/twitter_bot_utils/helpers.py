@@ -1,0 +1,110 @@
+# Copyright 2014 Neil Freeman
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+from HTMLParser import HTMLParser
+import yaml
+import json
+
+
+def has_url(status):
+    return has_entity(status, 'urls')
+
+
+def has_hashtag(status):
+    return has_entity(status, 'hashtags')
+
+
+def has_mention(status):
+    return has_entity(status, 'user_mentions')
+
+
+def has_media(status):
+    return has_entity(status, 'media')
+
+
+def has_symbol(status):
+    return has_entity(status, 'symbols')
+
+
+def has_entity(status, entitykey):
+    try:
+        return len(status.entities[entitykey]) > 0
+    except (AttributeError, KeyError):
+        return False
+
+
+def has_entities(status):
+    try:
+        if len([i for v in status.entities.values() for i in v]) > 0:
+            return True
+
+    except (AttributeError, KeyError):
+        pass
+
+    return False
+
+
+def format_status(status):
+    return format_text(status.text)
+
+
+def format_text(text):
+    return HTMLParser().unescape(text).replace('\n', ' ').strip()
+
+
+def config_parse(file_path):
+    with open(file_path, 'r') as f:
+        if file_path[-4:] == 'yaml':
+            return yaml.load(f.read())
+
+        elif file_path[-4:] == 'json':
+            return json.load(f.read())
+
+
+def remove_entity(status, entitytype):
+    '''Use indices to remove given entity type from status text'''
+    return remove_entities(status, [entitytype])
+
+
+def remove_entities(status, entitylist):
+    '''Remove entities for a list of items'''
+    try:
+        entities = status.entities
+        text = status.text
+    except AttributeError:
+        entities = status.get('entities', dict())
+        text = status['text']
+
+    indices = [ent['indices'] for etype, entval in entities.items() for ent in entval if etype in entitylist]
+    indices.sort(key=lambda x: x[0], reverse=True)
+
+    for start, end in indices:
+        text = text[:start] + text[end:]
+    return text
+
+
+def replace_urls(status):
+    '''replace URLS with expanded urls'''
+    text = status.text
+
+    if not has_url(status):
+        return text
+
+    urls = [(e['indices'], e['expanded_url']) for e in status.entities['urls']]
+    urls.sort(key=lambda x: x[0][0], reverse=True)
+
+    for (start, end), url in urls:
+        text = text[:start] + url + text[end:]
+
+    return text
