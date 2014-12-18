@@ -1,0 +1,1 @@
+from .shorturlpy import ShortUrlPy
