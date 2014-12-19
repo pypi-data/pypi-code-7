@@ -1,0 +1,12 @@
+INSTALLED_APPS = (
+    'oauth_tokens',
+    'm2m_history',
+    'taggit',
+    'twitter_api',
+)
+
+OAUTH_TOKENS_TWITTER_CLIENT_ID = ''
+OAUTH_TOKENS_TWITTER_CLIENT_SECRET = ''
+#OAUTH_TOKENS_TWITTER_SCOPE = ['offline_access']
+OAUTH_TOKENS_TWITTER_USERNAME = '+919665223715'
+OAUTH_TOKENS_TWITTER_PASSWORD = 'github0vich'
