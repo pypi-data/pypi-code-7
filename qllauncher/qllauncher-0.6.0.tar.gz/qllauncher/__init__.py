@@ -1,0 +1,5 @@
+__author__ = 'Victor Polevoy'
+__title__ = 'qllauncher'
+__version__ = '0.6.0'
+__license__ = 'GPL v3'
+__copyright__ = 'Copyright 2014 Victor Polevoy'
