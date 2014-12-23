@@ -1,0 +1,1 @@
+arma.est_params(residual)

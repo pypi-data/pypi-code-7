@@ -1,0 +1,6 @@
+arma = ARMA(A=make_lag_arr([1, 12, 13]), B=make_lag_arr([12]), rand_state=0)
+arma.fix_constants()
+arma.est_params(residual_known)
+pred = arma.forecast(residual_known, horizon=24)
+result = pd.DataFrame({'pred': pred[:, 0], 'truth': residual_all.values})
+result.plot()

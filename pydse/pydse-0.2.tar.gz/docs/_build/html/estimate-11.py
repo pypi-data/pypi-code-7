@@ -1,0 +1,1 @@
+plot_pacf(residual, lags=15)
