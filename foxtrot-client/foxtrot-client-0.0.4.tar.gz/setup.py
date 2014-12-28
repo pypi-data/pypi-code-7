@@ -1,0 +1,22 @@
+from setuptools import setup
+from foxtrot import VERSION
+
+def readme():
+  # Generated with `pandoc --from=markdown --to=rst --output=README.rst README.md`
+  with open('README.rst') as f:
+    return f.read()
+
+setup(
+  name = 'foxtrot-client',
+  packages = ['foxtrot'],
+  version = VERSION,
+  description = 'Foxtrot Client Library',
+  long_description = readme(),
+  author = 'Yasyf Mohamedali',
+  author_email = 'yasyf@foxtrot.io',
+  url = 'https://github.com/FoxtrotSystems/api-client-python',
+  download_url = 'https://github.com/FoxtrotSystems/api-client-python/tarball/' + VERSION,
+  license = 'MIT',
+  keywords = ['foxtrot', 'route optimization'],
+  install_requires = ['requests']
+)
