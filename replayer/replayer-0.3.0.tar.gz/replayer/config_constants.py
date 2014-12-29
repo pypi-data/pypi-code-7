@@ -1,0 +1,13 @@
+class ConfigConstants(object):
+    FILTER = 'Filter'
+    FILTERRULE = 'Rule'
+    HOST = 'host'
+    STATUS = 'Status'
+    METHODS = 'Methods'
+    HEADER = 'header'
+    TRANSFORM = 'transform'
+    LOGFORMAT = 'log_format'
+    THREADCOUNT = 'thread_count'
+    LOGFILE = 'log_file'
+    VERBOSE = 'verbose'
+    CONFIGFILE = 'config_file'
