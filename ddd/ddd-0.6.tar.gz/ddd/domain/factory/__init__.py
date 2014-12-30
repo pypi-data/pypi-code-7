@@ -1,0 +1,1 @@
+from ddd.domain.factory.base import Factory

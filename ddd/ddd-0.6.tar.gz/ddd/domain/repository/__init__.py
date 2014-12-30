@@ -1,0 +1,1 @@
+from ddd.domain.repository.base import Repository
