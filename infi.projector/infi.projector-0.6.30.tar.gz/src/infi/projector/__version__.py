@@ -1,0 +1,10 @@
+__version__ = "0.6.30"
+__git_commiter_name__ = "Arnon Yaari"
+__git_commiter_email__ = "arnony@infinidat.com"
+__git_branch__ = 'develop'
+__git_remote_tracking_branch__ = 'origin/develop'
+__git_remote_url__ = 'git@infinigit.infinidat.com:/host/projector.git'
+__git_head_hash__ = '9ddedcc837b58a2eb9795c59ab51c0a0342cc921'
+__git_head_subject__ = 'Revert "remove version.py template from skeleton\'s buildout.cfg (there is a default in the recipe now)"'
+__git_head_message__ = 'This reverts commit 0a116de067a1c6f34d32fe5892780a211e351ae9.'
+__git_dirty_diff__ = ''
