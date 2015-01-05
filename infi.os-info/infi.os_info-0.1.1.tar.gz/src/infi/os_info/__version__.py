@@ -1,0 +1,10 @@
+__version__ = "0.1.1"
+__git_commiter_name__ = "Guy Rozendorn"
+__git_commiter_email__ = "guy@rzn.co.il"
+__git_branch__ = '(detached from v0.1.1)'
+__git_remote_tracking_branch__ = '(No remote tracking)'
+__git_remote_url__ = '(Not remote tracking)'
+__git_head_hash__ = 'bca16548389b4f785d166f70c5f247d0fe8471c7'
+__git_head_subject__ = 'HOSTDEV-1928 compatability with all setuptools versions'
+__git_head_message__ = ''
+__git_dirty_diff__ = ''
